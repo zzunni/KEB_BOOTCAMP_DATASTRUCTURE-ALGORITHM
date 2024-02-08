@@ -1,5 +1,8 @@
 def factorial(number) -> int :
-    pass
+    result = 1
+    for i in range(1, number+1):
+        result = result * i
+    return result
 
 def nCr(n, r) -> int :
     '''
@@ -8,10 +11,9 @@ def nCr(n, r) -> int :
     :param r:
     :return: 경우의 수
     '''
-
     numerate = factorial(n)
     denominator = factorial(n-r) * factorial(r)
-    return numerate / denominator
+    return int(numerate / denominator)
 
 
 if __name__ == "__main__":
