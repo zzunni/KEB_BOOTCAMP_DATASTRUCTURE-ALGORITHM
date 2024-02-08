@@ -1,4 +1,5 @@
-#def factorial(number) -> int :
+import time
+# def factorial(number) -> int :
 #   '''
 #    factorial by reprtition
 #    :param number: number (int)
@@ -28,7 +29,11 @@ def nCr(n, r) -> int :
     :param r:
     :return: 경우의 수
     '''
+    start = time.time()
     numerate = factorial(n)
     denominator = factorial(n-r) * factorial(r)
+    end = time.time()
+    print(f"소요시간: {end - start}")
     return int(numerate / denominator)
 
+#위의 조합 함수는 단일책임법칙 위반, 데코레이터 함수 필요
